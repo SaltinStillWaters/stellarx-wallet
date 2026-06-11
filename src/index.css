@@ -1,0 +1,104 @@
+:root {
+  --bg: #0b0f19;
+  --surface: #111827;
+  --surface-2: #1f2937;
+  --text: #e5e7eb;
+  --text-muted: #9ca3af;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --radius: 12px;
+  --gap: 1rem;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--surface-2);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+input, button {
+  font: inherit;
+  color: inherit;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--surface-2);
+  border-radius: var(--radius);
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--accent);
+}
+
+button {
+  cursor: pointer;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  transition: background .15s ease;
+}
+
+button:hover { background: var(--accent-hover); }
+button:disabled { opacity: .6; cursor: not-allowed; }
+
+button.secondary {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+button.secondary:hover { background: #374151; }
+
+button.danger { background: var(--danger); }
+button.danger:hover { background: #dc2626; }
+
+.stack { display: flex; flex-direction: column; gap: var(--gap); }
+
+.row { display: flex; gap: var(--gap); align-items: center; }
+
+.small { font-size: 0.875rem; color: var(--text-muted); }
+
+.wrap {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.mnemonic {
+  background: var(--bg);
+  border: 1px dashed var(--surface-2);
+  border-radius: var(--radius);
+  padding: 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 1.125rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.error { color: var(--danger); font-size: 0.875rem; }
+.success { color: var(--success); font-size: 0.875rem; }
